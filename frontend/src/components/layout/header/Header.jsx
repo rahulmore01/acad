@@ -14,15 +14,15 @@ const LinkButton = ({ url = '/', title = 'Home', onClose }) => (
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     // give access to user
-    const isAuthenticated = false;
+    const isAuthenticated = true;
     const user = {
-        role:'admin'
+        role: 'admin'
     };
-const logoutHandler =()=>{
-    console.log("logout")
-    // to close the drawer
-onClose();
-}
+    const logoutHandler = () => {
+        console.log("logout")
+        // to close the drawer
+        onClose();
+    }
 
 
     return (
